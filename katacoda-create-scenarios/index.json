@@ -6,23 +6,23 @@
   "details": {
     "steps": [
       {
-        "title": "步骤1：方案结构",
+        "title": "step1",
         "text": "step1.md"
       },
       {
-        "title": "步骤2：方案语法",
+        "title": "step2",
         "text": "step2.md"
       },
       {
-        "title": "步骤3：CLI",
+        "title": "step3",
         "text": "step3.md"
       },
       {
-        "title": "步骤4：VS Code 拓展",
+        "title": "step4",
         "text": "step4.md"
       },
       {
-        "title": "步骤5：Webhook",
+        "title": "step5",
         "text": "step5.md"
       }
     ],
@@ -37,6 +37,6 @@
     "uilayout": "editor-terminal"
   },
   "backend": {
-    "imageid": "javascript"
+    "imageid": "node"
   }
 }

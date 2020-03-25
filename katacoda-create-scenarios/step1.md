@@ -1,4 +1,3 @@
-A Katacoda scenario is a series of Markdown files, bash scripts and a JSON file to define how your scenario should be configured, the text for the scenario and any automation required.
 Katacoda scenario 是由一组 Markdown、bash 脚本和一个 JSON 文件组成
 
 ## 任务

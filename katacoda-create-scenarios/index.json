@@ -6,23 +6,23 @@
   "details": {
     "steps": [
       {
-        "title": "step1",
+        "title": "Step 1 - Scenario Structure",
         "text": "step1.md"
       },
       {
-        "title": "step2",
+        "title": "Step 2 - Scenario Syntax",
         "text": "step2.md"
       },
       {
-        "title": "step3",
+        "title": "Step 3 - CLI",
         "text": "step3.md"
       },
       {
-        "title": "step4",
+        "title": "Step 4 - VS Code Extension",
         "text": "step4.md"
       },
       {
-        "title": "step5",
+        "title": "Step 5 - WebHooks",
         "text": "step5.md"
       }
     ],

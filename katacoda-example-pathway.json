@@ -1,0 +1,16 @@
+{
+  "title": "katacoda example",
+  "description": "example of katacoda",
+  "courses": [
+    {
+      "course_id": "create-course",
+      "title": "Creating a Katacoda Course",
+      "description": "Learn how to create a collection of Katacoda scenarios into a course"
+    },
+    {
+      "course_id": "katacoda-create-scenarios",
+      "title": "Create Secenario",
+      "description": "Learn how to create your first Katacoda scenario"
+    }
+  ]
+}

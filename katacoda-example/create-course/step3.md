@@ -18,7 +18,7 @@ katacoda courses:create
 CLI 将会提示您如下问题：
 - **Title:** 课程的标题，将会显示在简介上
 - **Description:** 方案的描述，将会显示在简介上
-- **Friendly-url:** 此处可输入 `test-course`，该属性将确定方案文件夹的名称，以及用来访问他的 URL。因此，该属性不能包括空格，需要是小写字母等。例如，如果您的用户名是 test-username 并且您的方案称为 test-course（如建议的那样），用于在平台中指向该方案的URL将为 https://katacoda.com/test-username/scenarios/test-scenario/
+- **Friendly-url:** 此处可输入 `test-course`，该属性将确定方案文件夹的名称，以及用来访问他的 URL。因此，该属性不能包括空格，需要是小写字母等。例如，如果您的用户名是 test-username 并且您的方案称为 test-course（如建议的那样），用于在平台中指向该课程的URL将为 https://katacoda.com/test-username/courses/test-course/
 
 之后您可以通过如下命令检查您创建的方案：`ls test-course*`{{execute}}
 

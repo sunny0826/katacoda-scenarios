@@ -2,7 +2,7 @@
 
 ## 安装 CLI
 
-通过 `npm` 命令安装 `npm i katacoda-cli --global`{{execute}}.
+通过 `npm` 命令安装 `npm i katacoda-cli --global`{{execute}}。
 
 命令遵循语法的是 `$ katacoda COMMAND`
 
@@ -12,7 +12,7 @@
 
 例如，要创建新的方案，可以通过运行命令 `katacoda scenarios:create`{{execute}}，CLI 将会提示一些信息，帮助您创建方案：
 - **Friendly URL:** 此处可输入 `test-scenario`，该属性将确定方案文件夹的名称，以及用来访问他的 URL。因此，该属性不能包括空格，需要是小写字母等。例如，如果您的用户名是 test-username 并且您的方案称为 test-scenario（如建议的那样），用于在平台中指向该方案的URL将为 https://katacoda.com/test-username/scenarios/test-scenario/
-- **Title:** 方案的标题
+- **Title:** 方案的标题，将会显示在简介上
 - **Description:** 方案的描述，将会显示在简介上
 - **Difficulty level:** 难度级别，将会显示在简介上
 - **Estimated time:** 估计完成的时间，将会显示在简介上

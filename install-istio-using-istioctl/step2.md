@@ -1,4 +1,4 @@
-从 istio v1.15 版本开始，[使用 helm 安装的方式已经废弃](https://istio.io/zh/docs/setup/install/helm/)，需改用 [istioclt 安装](https://istio.io/zh/docs/setup/install/istioctl/)。
+从 istio v1.15 版本开始，[使用 helm 安装](https://istio.io/zh/docs/setup/install/helm/)的方式已经废弃，需改用 [istioclt 安装](https://istio.io/zh/docs/setup/install/istioctl/)。
 
 ## 下载 istio
 

@@ -6,7 +6,7 @@
 
 使用如下命令来下载 istio：
 
-`curl -L https://istio.io/downloadIstio | sh -`{{execute}}
+`curl -L https://raw.githubusercontent.com/istio/istio/release-1.5/release/downloadIstioCandidate.sh | sh -`{{execute}}
 
 下载的 istio 包名为 `istio-1.5.1`，包含：
 - `install/kubernetes`：包含 Kubernetes 相关的 YAML 安装文件。

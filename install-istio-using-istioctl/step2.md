@@ -10,7 +10,7 @@
 
 下载的 istio 包名为 `istio-1.5.1`，包含：
 - `install/kubernetes`：包含 Kubernetes 相关的 YAML 安装文件。
-- `amples/`：包含示例应用程序。
+- `examples/`：包含示例应用程序。
 - `bin/`：包含 istioctl 的客户端文件。
 
 切换到 istio 包所在目录：

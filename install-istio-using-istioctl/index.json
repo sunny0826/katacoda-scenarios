@@ -6,19 +6,19 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - 检查",
+        "title": "Step 1 - Check Kubernetes",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 -  Download istio",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Quick Start",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Step 4 - Config Profiles",
         "text": "step4.md"
       },
       {

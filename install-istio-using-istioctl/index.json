@@ -1,6 +1,6 @@
 {
-  "title": "Istio install with Istioctl",
-  "description": "Istio install with Istioctl",
+  "title": "使用 istioctl 安装",
+  "description": "介绍使用 istioctl 安装的方法",
   "difficulty": "Beginner",
   "time": "10 minutes",
   "details": {

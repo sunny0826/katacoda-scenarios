@@ -13,7 +13,7 @@
 
 检查相关 pod 是否部署成功，并且 `STATUS` 为 `Running`：
 
-`kubectl get pods -n istio-system`
+`kubectl get pods -n istio-system`{{execute}}
 
 如果都正常部署，就可以部署自己的服务了。
 
@@ -25,4 +25,4 @@
 
 卸载程序将删除 `RBAC` 权限、`istio-system` 命名空间和所有相关资源。可以忽略那些不存在的资源的报错，因为它们可能已经被删除掉了。
 
-`istioctl manifest generate --set profile=demo | kubectl delete -f -`
+`istioctl manifest generate --set profile=demo | kubectl delete -f -`{{execute}}

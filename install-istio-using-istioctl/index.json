@@ -6,19 +6,19 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1 - Check Kubernetes",
+        "title": "Step 1 - 检查 k8s 集群",
         "text": "step1.md"
       },
       {
-        "title": "Step 2 -  Download istio",
+        "title": "Step 2 - 下载 istio",
         "text": "step2.md"
       },
       {
-        "title": "Step 3 - Quick Start 快速开始",
+        "title": "Step 3 - 快速开始",
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - Config Profiles",
+        "title": "Step 4 - 安装配置",
         "text": "step4.md"
       },
       {

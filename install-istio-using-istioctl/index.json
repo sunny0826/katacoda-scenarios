@@ -1,6 +1,6 @@
 {
   "title": "使用 istioctl 安装 istio",
-  "description": "介绍使用 istioctl 安装的方法",
+  "description": "介绍使用 istioctl 安装 istio 的方法",
   "difficulty": "Beginner",
   "time": "10 minutes",
   "details": {

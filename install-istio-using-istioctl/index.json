@@ -18,11 +18,11 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 4 - 安装配置",
+        "title": "Step 4 - 简单运行 Bookinfo 示例",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Step 5 - 安装配置",
         "text": "step5.md"
       }
     ],
@@ -34,7 +34,9 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Display 80", "port": 80}]
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"

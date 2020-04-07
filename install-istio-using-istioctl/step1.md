@@ -4,6 +4,8 @@
 
 使用前，检查 k8s 集群状态：`kubectl cluster-info`{{execute}}
 
+如果集群未启动，请执行：`launch.sh`{{execute}}
+
 检查 `katacoda-cloud-provider`，这个会影响到环境是否能正常提供外部负载均衡:
 
 `kubectl get deploy -n kube-system katacoda-cloud-provider`{{execute}}

@@ -39,6 +39,6 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kubernetes-cluster"
+    "dockerimage": "kubeadm-cluster2-running"
   }
 }

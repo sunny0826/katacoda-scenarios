@@ -39,6 +39,7 @@
     "uilayout": "terminal"
   },
   "backend": {
+    "port": 8080,
     "dockerimage": "kubeadm-cluster2-running"
   }
 }

@@ -1,8 +1,10 @@
 {
   "title": "使用 istioctl 安装 istio",
+  "icon": "fa-istio",
   "description": "介绍使用 istioctl 安装 istio 的方法",
   "difficulty": "Beginner",
   "time": "10 minutes",
+  "authenticated": false,
   "details": {
     "steps": [
       {

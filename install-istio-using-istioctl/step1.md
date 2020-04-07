@@ -1,5 +1,7 @@
 本教程将自动帮您启动一个包含2个节点的 k8s 集群（包含一个 master 节点，一个 worker 节点），Kubernetes 版本为 v1.14.0
 
+`launch.sh`{{execute}}
+
 #### 检查 k8s 集群
 
 使用前，检查 k8s 集群状态：`kubectl cluster-info`{{execute}}

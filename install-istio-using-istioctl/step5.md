@@ -50,3 +50,9 @@
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`prometheus` | X | X | | X |
 
 为了进一步自定义 Istio 和安装插件，您可以在安装 Istio 时所使用的 `istioctl manifest` 命令中添加一个或多个 `--set <key>=<value>` 选项。 [安装选项](https://istio.io/zh/docs/reference/config/installation-options/)中列出了完整的当前所支持的安装键值对集合。
+
+## 卸载 istio
+
+卸载程序将删除 `RBAC` 权限、`istio-system` 命名空间和所有相关资源。可以忽略那些不存在的资源的报错，因为它们可能已经被删除掉了。
+
+`istioctl manifest generate --set profile=demo | kubectl delete -f -`{{execute}}

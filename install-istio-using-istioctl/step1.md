@@ -4,4 +4,10 @@
 
 使用前，检查 k8s 集群状态：`kubectl cluster-info`{{execute}}
 
+检查 `katacoda-cloud-provider`，这个会影响到环境是否能正常提供外部负载均衡:
+
+`kubectl get deploy -n kube-system katacoda-cloud-provider`{{execute}}
+
 还可以使用 `kubectl` 命令执行一些其他命令，检查 k8s 集群的完整性。
+
+正常启动了就可进入下一步了。

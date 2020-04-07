@@ -20,8 +20,3 @@
 
 部署成功后，就可以进入 Bookinfo 示例了，但这里不会展开体检 Istio 的流量路由、故障注入、速率限制等功能，相关内容会在 Bookinfo 部分介绍，这里只做简单介绍。
 
-### 卸载 istio
-
-卸载程序将删除 `RBAC` 权限、`istio-system` 命名空间和所有相关资源。可以忽略那些不存在的资源的报错，因为它们可能已经被删除掉了。
-
-`istioctl manifest generate --set profile=demo | kubectl delete -f -`{{execute}}

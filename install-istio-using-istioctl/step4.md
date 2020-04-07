@@ -47,10 +47,11 @@
 
 可以点击下面的连接查看：
 
-https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/productpage
+https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/productpage
 
-## kiali
 
-`istioctl dashboard kiali`{{execute}}
+## 卸载 istio
 
-https://[[HOST_SUBDOMAIN]]-20001-[[KATACODA_HOST]].environments.katacoda.com/kiali
+卸载程序将删除 `RBAC` 权限、`istio-system` 命名空间和所有相关资源。可以忽略那些不存在的资源的报错，因为它们可能已经被删除掉了。
+
+`istioctl manifest generate --set profile=demo | kubectl delete -f -`{{execute}}

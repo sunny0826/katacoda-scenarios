@@ -34,7 +34,9 @@
     }
   },
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "terminal",
+    "showdashboard": true,
+    "dashboards": [{"name": "Display 80", "port": 80}]
   },
   "backend": {
     "imageid": "kubernetes-cluster-running"

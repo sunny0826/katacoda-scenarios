@@ -7,7 +7,7 @@
 
 `kubectl apply -f samples/bookinfo/platform/kube/bookinfo.yaml`{{execute}}
 
-确认所有服务和 pod 都已经正常启动了：
+确认所有服务和 pod 都已经正常启动了，请耐心等待：
 
 `kubectl get services`{{execute}}
 

@@ -36,9 +36,10 @@
   "environment": {
     "uilayout": "terminal",
     "showdashboard": true,
-    "dashboards": [{"name": "Display 80", "port": 80}]
+    "dashboards": [{"name": "Display 80", "port": 3000}]
   },
   "backend": {
-    "imageid": "kubernetes-cluster-running"
+    "imageid": "kubernetes-cluster-running",
+    "port": 3000
   }
 }

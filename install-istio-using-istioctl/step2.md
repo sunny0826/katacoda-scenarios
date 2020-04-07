@@ -19,7 +19,7 @@
 使用如下命令将 `istioctl` 客户端路径加入 $PATH 中：
 `export PATH=$PATH:/root/istio-1.5.1/bin`{{execute}}
 
-截止目前，我们已经可使用高度自定义 Istio 控制平面和数据平面的 `istioctl` 命令行工具。 该命令行工具具有用户输入校验功能，可以防止错误的安装和自定义选项。
+截止目前，我们已经可以使用高度自定义 Istio 控制平面和数据平面的 `istioctl` 命令行工具。 该命令行工具具有用户输入校验功能，可以防止错误的安装和自定义选项。
 
 使用如下命令，查看更多关于 `istioctl` 的信息：
 `istioctl -h`{{execute}}

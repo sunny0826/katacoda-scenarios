@@ -2,7 +2,7 @@
 
 ## 下载 istio
 
-可在 [istio release] 页面下载与您操作系统匹配的压缩文件，该文件中包含：安装文件、示例和 istioctl 命令行工具。
+可在 [istio release](https://github.com/istio/istio/releases/tag/1.5.1) 页面下载与您操作系统匹配的压缩文件，该文件中包含：安装文件、示例和 istioctl 命令行工具。
 
 使用如下命令来下载 istio：
 

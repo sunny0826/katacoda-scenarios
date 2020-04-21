@@ -8,38 +8,22 @@
 
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/kiali
 
-设置 ingress IP：
+查看 Grafana 端口：
 
-`export INGRESS_HOST=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.status.loadBalancer.ingress[0].ip}')`{{execute}}
+`kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="grafana")].nodePort}'`{{execute}}
 
-`echo $INGRESS_HOST`
+查看 Prometheus 端口：
 
-设置 Grafana 端口：
+`kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="prometheus")].nodePort}'`{{execute}}
 
-`export GRAFANA_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="grafana")].nodePort}')`{{execute}}
+查看 Tracing 端口：
 
-`echo $GRAFANA_PORT`
+`kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="tracing")].nodePort}'`{{execute}}
 
-访问 Grafana：
+点击进入页面：
 
-https://[[HOST_SUBDOMAIN]]-[[GRAFANA_PORT]]-[[KATACODA_HOST]].environments.katacoda.com
+https://[[HOST_SUBDOMAIN]]-[[KATACODA_HOST]].environments.katacoda.com
 
-设置 Prometheus 端口：
+将查询到的端口输入并点击 `Display Port` 即可访问对应服务：
 
-`export PROMETHEUS_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="prometheus")].nodePort}')`{{execute}}
-
-`echo $PROMETHEUS_PORT`
-
-访问 Prometheus：
-
-https://[[HOST_SUBDOMAIN]]-[[PROMETHEUS_PORT]]-[[KATACODA_HOST]].environments.katacoda.com
-
-设置 Tracing 端口：
-
-`export TRACING_PORT=$(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="tracing")].nodePort}')`{{execute}}
-
-`echo $TRACING_PORT`
-
-访问 Tracing：
-
-https://[[HOST_SUBDOMAIN]]-[[TRACING_PORT]]-[[KATACODA_HOST]].environments.katacoda.com
+![image](https://tvax3.sinaimg.cn/large/ad5fbf65ly1ge1i1rjevnj21hc0q8jst.jpg)

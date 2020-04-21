@@ -8,9 +8,9 @@
       "description": "介绍使用 istioctl 安装 istio 的方法"
     },
     {
-      "course_id": "istio",
-      "title": "istio env",
-      "description": "istio env"
+      "course_id": "istio-observability",
+      "title": "Istio 可观测性工具",
+      "description": "使用 Istio 可观测性工具"
     }
   ]
 }

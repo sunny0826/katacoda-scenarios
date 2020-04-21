@@ -1,16 +1,16 @@
 {
-  "title": "istio env",
-  "description": "istio env",
+  "title": "Istio 可观测性工具",
+  "description": "使用 Istio 可观测性工具",
   "difficulty": "Beginner",
-  "time": "2",
+  "time": "10 minutes",
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - 启动 K8S 集群和 Istio",
         "text": "step1.md"      
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - 配置 Ingress Gateway",
         "text": "step2.md"
       }
     ],

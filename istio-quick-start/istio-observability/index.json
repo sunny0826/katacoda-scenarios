@@ -1,8 +1,10 @@
 {
   "title": "Istio 可观测性工具",
+  "icon": "fa-istio",
   "description": "使用 Istio 可观测性工具",
   "difficulty": "Beginner",
   "time": "10 minutes",
+  "authenticated": false,
   "details": {
     "steps": [
       {

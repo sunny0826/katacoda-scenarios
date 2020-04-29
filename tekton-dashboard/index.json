@@ -1,29 +1,29 @@
 {
   "title": "Tekton Dashboard",
-  "description": "Learn how to use the Tekton Dashboard!",
+  "description": "学习如何使用 Tekton Dashboard!",
   "difficulty": "Beginner",
   "time": "30",
   "details": {
     "steps": [
       {
-        "title": "Install the Tekton Dashboard",
+        "title": "安装 Tekton Dashboard",
         "text": "step1.md",
         "code": "init.sh"
       },
       {
-        "title": "Import Tekton Resources for MyApp",
+        "title": "导入 MyApp 到 Tekton Resources",
         "text": "step2.md"
       },
       {
-        "title": "Create the PipelineResource for MyApp",
+        "title": "为 MyApp 创建 PipelineResource",
         "text": "step3.md"
       },
       {
-        "title": "Build & Deploy MyApp",
+        "title": "构建 & 部署 MyApp",
         "text": "step4.md"
       },
       {
-        "title": "Monitor the PipelineRun & View MyApp",
+        "title": "查看 PipelineRun 日志 & 查看 MyApp",
         "text": "step5.md"
       }
     ],

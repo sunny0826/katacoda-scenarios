@@ -1,20 +1,15 @@
-In this section, we will import a Tekton Pipeline to build and deploy the
-demo Nodejs app called [MyApp](https://github.com/ncskier/myapp). MyApp displays
-a random picture of a cat.
+本节中，我们将会导入一个 Tekton Pipeline 来构建和部署一个使用 Node.js 开发的 demo：[MyApp](https://github.com/ncskier/myapp)（MyApp 可以随机显示一张猫咪的图片）。
 
-## Open the Tekton Dashboard Import Tekton resources page
+## 打开 Tekton Dashboard 导入 Tekton 资源页面
 
-Click on the following link to go directly to the Import Tekton resources page:
+点击如下的链接，进入导入 Tekton 资源页面：
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/#/importresources
 
-Or navigate to the Import Tekton resources page in the Dashboard.
+或在左侧导航中点击 `Import Tekton resources` 进入页面。
 
-## Import the MyApp Tekton resources
+## 导入 MyApp 的 Tekton 资源
 
-We want to import the Tekton resources that are defined in the
-[`tekton/`](https://github.com/ncskier/myapp/tree/master/tekton) directory of
-MyApp. Import these Tekton resources into the `default` Namespace by
-filling in the form with the following information:
+MyApp 的 Tekton 资源 存放在 [`tekton/`](https://github.com/ncskier/myapp/tree/master/tekton) 目录。通过填写以下信息，将这些Tekton资源导入到 `default` 命名空间中：
 
 Repository URL: `https://github.com/ncskier/myapp`{{copy}}
 
@@ -24,21 +19,20 @@ Repository directory: `tekton/`{{copy}}
 
 Service Account `tekton-dashboard`
 
-The form should look like the following:
+该表格的内容应如下：
 
 ![Import Tekton resources screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/import-tekton-resources.png)
 
-Click the `Import and Apply` button.
+点击 `Import and Apply` 按钮。
 
-## View the progress importing the Tekton resources
+## 查看 Tekton 资源导入进度
 
-The Dashboard creates a PipelineRun to import the specified Tekton resources.
+Dashboard 会创建一个 PipelineRun 来导入指定的 Tekton 资源。
 
-Click on the `View status of this run` link at the bottom of the page to view
-the status of importing the Tekton resources for MyApp.
+点击页面底部的 `View status of this run` 链接，查看 MyApp 导入 Tekton 资源的状态。
 
 ![View status of importing Tekton resources screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/view-status-of-pipeline0.png)
 
-The Tekton resources have been imported when the PipelineRun has completed.
+PipelineRun 完成后，Tekton 资源已导入成功。
 
 ![Import Tekton resources PipelineRun logs screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/import-pipelinerun-logs.png)

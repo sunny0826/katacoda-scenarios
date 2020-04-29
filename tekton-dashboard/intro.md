@@ -1,9 +1,9 @@
-# Introduction to the Tekton Dashboard
+# Tekton Dashboard 介绍
 
-In this tutorial, we will go through:
+在本教程中，我们将学习：
 
-- Installing the Tekton Dashboard
-- Importing a Tekton Pipeline using the Tekton Dashboard
-- Creating a PipelineResource using the Tekton Dashboard
-- Creating a PipelineRun using the Tekton Dashboard
-- Monitoring the logs of a PipelineRun using the Tekton Dashboard
+- 安装 Tekton Dashboard
+- 使用 Tekton Dashboard 导入 Tekton Pipeline
+- 使用 Tekton Dashboard 创建 PipelineResource
+- 使用 Tekton Dashboard 创建 PipelineRun
+- 使用 Tekton Dashboard 查看 PipelineRun 日志

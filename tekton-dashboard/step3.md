@@ -1,25 +1,21 @@
-In this section, we will create the git PipelineResource for MyApp. We will
-later use this PipelineResource to run the Pipeline to build and deploy MyApp.
+本节中，我们将为 MyApp 创建 git PipelineResource，之后将使用 PipelineResource 运行 Pipeline 来构建和部署 MyApp。
 
-## Navigate to the PipelineResources page
+## 进入 PipelineResources 页面
 
-Click on the following link to go directly to the PipelineResources page in the
-Dashboard:
+点击如下链接进入 PipelineResources 页面：
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/#/namespaces/default/pipelineresources
 
-Or navigate to the `default` Namespace's PipelineResources page in the Dashboard.
+或者使用左侧导航进入 `default` 命名空间的 PipelineResources 页面。
 
-*Make sure the `default` Namespace is selected in the Namespace dropdown.*
+*确保在命名空间下拉菜单中选择了 `default`。*
 
 ![Navigate to PipelineResources page screenshot](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/pipeline-resources-page.png)
 
-## Create the PipelineResource
+## 创建 PipelineResource
 
-Click on the blue `Create +` button in the upper right section of the page.
+点击页面右上方的 `Create +` 按钮，将弹出一个创建 PipelineResource 的表单。
 
-This opens a form to create a PipelineResource. We want to create a git
-PipelineResource for the `master` branch of MyApp in the `default` namespace.
-So, fill in the form with the following information:
+我们要在 `default` 命名空间中为 MyApp的 `master` 分支创建一个 git PipelineResource，故在弹出的表单中填写以下信息：
 
 Name: `myapp`{{copy}}
 
@@ -31,10 +27,10 @@ URL: `https://github.com/ncskier/myapp`{{copy}}
 
 Revision: `master`{{copy}}
 
-The form should look like the following:
+该表单内容应如下：
 
 ![Create PipelineResource form screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/create-pipeline-resource-form.png)
 
-Click the `Create` button to create the PipelineResource.
+点击 `Create` 按钮，创建 PipelineResource。
 
 ![Created PipelineResource screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/created-pipeline-resource.png)

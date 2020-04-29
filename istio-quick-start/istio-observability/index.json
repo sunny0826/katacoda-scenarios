@@ -18,13 +18,10 @@
     ],
     "assets": {
       "host01": [
-        {"file": "grafana.yaml", "target": "~/"},
-        {"file": "grafnan-gateway.yaml", "target": "~/"},
-        {"file": "kiali.yaml", "target": "~/"},
-        {"file": "tracing-gateway.yaml", "target": "~/"},
-        {"file": "tracing.yaml", "target": "~/"},
-        {"file": "prometheus-gateway.yaml", "target": "~/"},
-        {"file": "prometheus-gateway.yaml", "target": "~/"}
+        {
+          "file": "*",
+          "target": "~/"
+        }
       ]
     },
     "intro": {

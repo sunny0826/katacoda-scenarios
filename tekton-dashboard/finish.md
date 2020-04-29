@@ -1,13 +1,13 @@
-# Additional resources
+# 补充资源
 
-## Learn more about the Tekton Dashboard
+## 了解更多关于 Tekton Dashboard 的信息
 
 https://github.com/tektoncd/dashboard
 
-## Learn more about Tekton Pipelines
+## 了解更多关于 Tekton Pipeline 的信息
 
 https://github.com/tektoncd/pipeline
 
-## Get involved in the Tekton Community
+## 参与到 Tekton 社区中来
 
 https://github.com/tektoncd/community#want-to-get-involved

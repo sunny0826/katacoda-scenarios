@@ -1,23 +1,20 @@
-In this section, we will create the PipelineRun to build and deploy MyApp.
+本节中，我们将创建 PipelineRun 来构建和部署 MyApp。
 
-## Navigate to the PipelineRuns page
+## 进入 PipelineRuns 页面
 
-Click on the following link to go directly to the PipelineRuns page in the
-Dashboard:
+点击如下链接进入 PipelineRuns 页面：
 https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/#/namespaces/default/pipelineruns
 
-Or navigate to the `default` Namespace's PipelineRuns page.
+或者使用左侧导航进入 `default` 命名空间的 PipelineRuns 页面。
 
 ![Navigate to PipelineRuns page screenshot](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/pipeline-runs-page.png)
 
-## Create the PipelineRun
+## 创建 PipelineRun
 
-Click on the blue `Create +` button in the upper right section of the page.
+点击页面右上方的 `Create +` 按钮，将弹出一个创建 PipelineRun 的表单。
 
-This opens a form to create a PipelineRun. The form is dynamic, and provides
-PipelineResource and Param fields based on the selected Pipeline. We want to
-create a PipelineRun in the `default` Namespace using the `myapp` Pipeline and
-`myapp` PipelineResource. So, fill in the form with the following information:
+该表单是动态的，会根据所选的 Pipeline 提供 PipelineResource 和 Param 字段。
+我们需要 `default` 命名空间中使用 `myapp` 的 Pipeline 和 PipelineResource，创建一个 PipelineRun，故在弹出的表单中填写以下信息：
 
 Namespace: `default`
 
@@ -25,12 +22,12 @@ Pipeline: `myapp`
 
 PipelineResources source: `myapp`{{copy}}
 
-Leave the default values for the rest of the fields.
+其余字段保留默认值。
 
-The form should look like the following:
+该表单内容应如下：
 
 ![Create PipelineRun form screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/create-pipeline-run-form.png)
 
-Click the `Create` button to create the PipelineRun.
+点击 `Create` 按钮，创建 PipelineRun
 
 ![Created PipelineRun screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/created-pipeline-run.png)

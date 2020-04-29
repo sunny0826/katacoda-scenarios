@@ -1,25 +1,22 @@
-In this section, we will view the PipelineRun logs to monitor its progress.
-Then, we will open MyApp.
+本节中，我们将通过查看 PipelineRun 日志来监控其进度。部署成功后，将打开 MyApp，查看部署效果。
 
-## Monitor the PipelineRun logs
+## 查看 PipelineRun 日志
 
-View the PipelineRun logs for the MyApp PipelineRun by clicking on the link in
-the creation notification at the top of the page.
+点击页面顶部创建通知中的链接，查看MyApp PipelineRun 的日志。
 
 ![PipelineRun creation notification screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/pipeline-run-created-notification.png)
 
-Or select the PipelineRun from the list of PipelineRuns.
+或在 PipelineRun 列表中选择 PipelineRun。
 
 ![View the running PipelineRun logs for MyApp screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/pipeline-run-running.png)
 
-Verify both the `build` and `deploy` tasks have passed.
+确定 `build` 和 `deploy` 任务均已成功。
 
 ![View the completed PipelineRun logs for MyApp screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/pipeline-run-completed.png)
 
-## Open the Deployed App
+## 打开 MyApp
 
-MyApp will be running on port `3000`. Click on the following link to open the
-app:
+MyApp 将会运行在 `3000` 端口，点击如下链接查看：
 https://[[HOST_SUBDOMAIN]]-3000-[[KATACODA_HOST]].environments.katacoda.com/
 
 ![View MyApp screenshot.](https://raw.githubusercontent.com/ncskier/katacoda/master/tekton-dashboard/images/view-myapp.png)

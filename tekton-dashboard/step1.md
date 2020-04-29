@@ -1,12 +1,12 @@
 本节将介绍安装 Tekton Dashboard 的方法。
 
-## Katacoda Kubernetes Cluster
+## Katacoda Kubernetes 集群
 
 Katacoda 可能需要一两分钟的时间来初始化你的 Kubernetes 集群。当集群初始化完成后，可以使用`kubectl cluster-info`{{execute}}命令可以查看集群信息。
 
 让我们开始吧！
 
-## 安装 Tekton Dashboard 请条件
+## 安装 Tekton Dashboard 前提条件
 
 - 安装 [Tekton Pipelines](https://github.com/tektoncd/pipeline/blob/master/docs/install.md)
 `kubectl apply --filename https://storage.googleapis.com/tekton-releases/pipeline/previous/v0.10.1/release.yaml`{{execute}}

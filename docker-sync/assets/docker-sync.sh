@@ -51,7 +51,8 @@ get_orgion_name() {
 change_image_name() {
     docker_name=$(get_image_name ${line})
     docker_tag=$(get_tag ${line})
-    printf '%s' $USERNAME/$docker_name
+    # printf '%s' $USERNAME/$docker_name
+    printf '%s' registry.cn-shanghai.aliyuncs.com/keking/$docker_name:$docker_tag
 }
 
 get_image_id() {
@@ -75,6 +76,6 @@ run() {
 {
     verify_docker
     read_user_name
-    docker login -u $USERNAME
+    docker login -u $USERNAME registry.cn-shanghai.aliyuncs.com
     run
 }

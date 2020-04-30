@@ -51,7 +51,7 @@ get_orgion_name() {
 change_image_name() {
     docker_name=$(get_image_name ${line})
     docker_tag=$(get_tag ${line})
-    printf '%s' $USERNAME/$docker_name:$docker_tag
+    printf '%s' $USERNAME/$docker_name
 }
 
 get_image_id() {

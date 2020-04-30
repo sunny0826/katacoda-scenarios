@@ -1,0 +1,34 @@
+{
+  "title": "sync",
+  "description": "sync docker image",
+  "difficulty": "Beginner",
+  "time": "10 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md"
+      }
+    ],
+    "assets": {
+      "host01": [
+        {
+          "file": "*",
+          "target": "~/"
+        }
+      ]
+    },
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu"
+  }
+}

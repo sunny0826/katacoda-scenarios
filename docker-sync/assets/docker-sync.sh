@@ -56,7 +56,7 @@ change_image_name() {
 get_image_id() {
     name=$(get_orgion_name ${line})
     echo $name
-    printf '%' $(docker images|grep $name | awk '{printf $3}')
+    printf '%s' $(docker images|grep $name | awk '{printf $3}')
 }
 
 run() {

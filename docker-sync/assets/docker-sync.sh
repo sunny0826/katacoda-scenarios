@@ -62,7 +62,7 @@ get_image_id() {
 run() {
 	cat "${IMAGE_LIST_FILE}" | while read line
     do
-        sudo docker pull ${line}
+        docker pull ${line}
         echo $(get_image_id ${line})
         echo $(change_image_name ${line})
         docker tag $(get_image_id ${line}) $(change_image_name ${line})

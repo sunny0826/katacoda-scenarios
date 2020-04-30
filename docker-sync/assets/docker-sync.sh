@@ -36,7 +36,7 @@ read_user_name() {
 
 get_tag() {
     tag=${line#*:}
-    printf '%s' ${tag#*@}
+    printf '%s' ${tag%%@*}
 }
 
 get_image_name() {

@@ -68,6 +68,6 @@ run() {
 {
     verify_docker
     read_user_name
-    sudo docker login
+    sudo docker login -u $USERNAME
     run
 }

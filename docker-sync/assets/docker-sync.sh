@@ -76,6 +76,6 @@ run() {
 {
     verify_docker
     read_user_name
-    docker login -u $USERNAME registry.cn-shanghai.aliyuncs.com
+    docker login --username=$USERNAME registry.cn-shanghai.aliyuncs.com
     run
 }

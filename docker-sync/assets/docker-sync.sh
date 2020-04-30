@@ -65,8 +65,8 @@ run() {
         sudo docker pull ${line}
         echo $(get_image_id ${line})
         echo $(change_image_name ${line})
-        sudo docker tag $(get_image_id ${line}) $(change_image_name ${line})
-        sudo docker push $(change_image_name ${line})
+        docker tag $(get_image_id ${line}) $(change_image_name ${line})
+        docker push $(change_image_name ${line})
         # echo $(change_image_name ${line})
     done
 }
@@ -75,6 +75,6 @@ run() {
 {
     verify_docker
     read_user_name
-    sudo docker login -u $USERNAME
+    docker login -u $USERNAME
     run
 }

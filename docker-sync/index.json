@@ -8,7 +8,7 @@
       {
         "title": "Step 1",
         "text": "step1.md",
-        "code": "docker-sync.sh"
+        "code": "assets/docker-sync.sh"
       }
     ],
     "assets": {

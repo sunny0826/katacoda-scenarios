@@ -35,7 +35,8 @@ read_user_name() {
 }
 
 get_tag() {
-    printf '%s' ${line#*:}
+    tag=${line#*:}
+    printf '%s' ${tag#*@}
 }
 
 get_image_name() {
@@ -55,7 +56,6 @@ change_image_name() {
 
 get_image_id() {
     name=$(get_orgion_name ${line})
-    echo $name
     printf '%s' $(docker images|grep $name | awk '{printf $3}')
 }
 

@@ -1,3 +1,3 @@
 ## sync
 
-`docker-sync.sh`{{execute}}
+`sh docker-sync.sh`{{execute}}

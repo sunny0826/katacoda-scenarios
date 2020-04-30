@@ -23,6 +23,9 @@ verify_docker() {
     if [ -x /usr/local/bin/docker ]; then
         HAS_DOCKER=true
         return
+    elif [ -x /usr/bin/docker ]; then
+        HAS_DOCKER=true
+        return
     fi
     fatal 'Can not find docker'
 }
@@ -50,14 +53,14 @@ get_image_id() {
     printf '%' $(docker images|grep ${line} | awk '{printf $3}')
 }
 
-read_config() {
+run() {
 	cat "${IMAGE_LIST_FILE}" | while read line
     do
-        docker pull ${line}
+        sudo docker pull ${line}
         # echo ${line}
         # echo $(get_image_id ${line})
-        docker tag ${line} $(change_image_name ${line})
-        docker push $(change_image_name ${line})
+        sudo docker tag ${line} $(change_image_name ${line})
+        sudo docker push $(change_image_name ${line})
         # echo $(change_image_name ${line})
     done
 }
@@ -66,6 +69,6 @@ read_config() {
 {
     verify_docker
     read_user_name
-    docker login
-    read_config
+    sudo docker login
+    run
 }

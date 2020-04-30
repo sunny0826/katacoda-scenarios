@@ -34,13 +34,17 @@ read_user_name() {
     read -p "Please input your username: " USERNAME
 }
 
-get_tag(){
+get_tag() {
     printf '%s' ${line#*:}
 }
 
-get_image_name(){
+get_image_name() {
     str=${line%%:*}
     printf '%s' ${str##*/}
+}
+
+get_orgion_name() {
+    printf '%s' ${line%%:*}
 }
 
 change_image_name() {
@@ -50,7 +54,8 @@ change_image_name() {
 }
 
 get_image_id() {
-    printf '%' $(docker images|grep ${line} | awk '{printf $3}')
+    name=$(get_orgion_name ${line})
+    printf '%' $(docker images|grep ${name} | awk '{printf $3}')
 }
 
 run() {

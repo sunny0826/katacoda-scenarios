@@ -1,1 +1,0 @@
-`sh docker-sync.sh`{{execute}}

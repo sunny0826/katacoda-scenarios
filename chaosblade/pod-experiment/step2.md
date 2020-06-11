@@ -33,6 +33,8 @@ Pod 资源均支持以下参数。
 
 执行命令：`kubectl get blade delete-two-pod-by-labels -o json`{{execute}}
 
+等待 **phase** 状态变为 **Running**
+
 **查看实验结果**
 
 回到终端1，查看实验结果：

@@ -22,6 +22,8 @@
 
 执行命令： `kubectl get blade dns-pod-network-by-names -o json `{{execute}}
 
+等待 **phase** 状态变为 **Running**
+
 **观测结果**
 
 直接从实验 pod PING www.baiud.com：

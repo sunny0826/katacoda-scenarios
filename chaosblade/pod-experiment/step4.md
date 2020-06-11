@@ -33,6 +33,8 @@
 
 执行命令：`kubectl get blade loss-pod-network-by-names -o json`{{execute}}
 
+等待 **phase** 状态变为 **Running**
+
 **观测结果**
 
 获取实验 pod ip：

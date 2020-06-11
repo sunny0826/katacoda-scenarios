@@ -26,6 +26,8 @@
 
 `kubectl apply -f delay_pod_network_by_names.yaml`{{execute}}
 
+等待 **phase** 状态变为 **Running**
+
 **查看实验状态**
 
 执行命令：`kubectl get blade delay-pod-network-by-names -n chaosblade -o json`{{execute}}

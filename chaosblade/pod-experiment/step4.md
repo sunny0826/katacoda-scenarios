@@ -39,12 +39,12 @@
 `echo $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})`{{execute}}
 
 直接从观测 pod 访问实验 pod IP：
-`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'ping $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})'`{{execute}}
+`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'ping '$(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})`{{execute}}
 
 无响应，`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
 从未指定丢包的 pod 进入访问实验 pod IP：
-`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[1]..metadata.name}) -n chaosblade -- bash -c 'ping $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})'`{{execute}}
+`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[1]..metadata.name}) -n chaosblade -- bash -c 'ping '$(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})`{{execute}}
 
 相应正常，`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 

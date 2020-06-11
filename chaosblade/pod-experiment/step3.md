@@ -36,7 +36,7 @@
 `echo $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})`{{execute}}
 
 直接从观测 pod 访问实验 pod IP
-`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'apt-get update && apt-get install -y telnet && time echo "" | telnet $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP}) 6379'`{{execute}}
+`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'apt-get update && apt-get install -y telnet && time echo "" | telnet '$(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})' 6379'`{{execute}}
 
 可以看到结果符合预期
 

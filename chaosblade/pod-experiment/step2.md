@@ -1,5 +1,3 @@
-## Pod 资源自身场景
-
 **参数**
 
 Pod 资源均支持以下参数。
@@ -15,30 +13,34 @@ Pod 资源均支持以下参数。
 
 ### 删除 Pod
 
-删除 default 命名空间下标签是 `app=httpbin` 的 pod。
+删除 chaosblade 命名空间下标签是 `role=master` 的 pod。
 
 **执行观测**
 
 开始观察需要删除的 pod：
 
-```bash
-kubectl get pod -l "app=httpbin" -w
-```
+`kubectl get pod -l "role=master" -n chaosblade -w`{{execute}}
 
 **开始实验**
 
-新建终端，并开始实验：
+修改 `delete_pod_by_labels.yaml`{{open}}，将 pod 名称填入 `name` 字段。
 
-```bash
-kubectl apply -f delete_pod_by_labels.yaml
-```
+在新终端开始实验：`kubectl apply -f delete_pod_by_labels.yaml`{{execute T2}}
 
 **查看实验状态**
 
-执行命令：`kubectl get blade delete-two-pod-by-labels -o json`
+执行命令：`kubectl get blade delete-two-pod-by-labels -o json`{{execute}}
+
+**查看实验结果**
+
+回到终端1，查看实验结果：
+
+`echo "Run in Terminal 1"`{{execute T1}}
+
+可以看到 pod 名称发生变化，表示原 pod 已被删除。
 
 **停止实验**
 
-执行命令：`kubectl delete -f delete_pod_by_labels.yaml`
+执行命令：`kubectl delete -f delete_pod_by_labels.yaml`{{execute}}
 
-或者直接删除 blade 资源：`kubectl delete blade delete-two-pod-by-labels`
+或者直接删除 blade 资源：`kubectl delete blade delete-two-pod-by-labels`{{execute}}

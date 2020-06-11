@@ -10,7 +10,9 @@
 
 ChaosBlade-Operator 需要使用 Helm 安装，进入 [release 页面](https://github.com/chaosblade-io/chaosblade-operator/releases) 下载安装包（ChaosBlade 还提供了阿里云 OSS 的下载地址，提升国内下载速度）。
 
-使用 Helm 3 安装：
+使用 Helm 3：
+
+`curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash`{{execute}}
 
 **下载安装包**
 
@@ -43,3 +45,7 @@ add repo：
 `helm install guestbook apphub-incubator/guestbook --set service.type=NodePort --namespace=chaosblade`{{execute}}
 
 默认的 Service 类型为 `LoadBalancer`，这里为了方便访问设置为了 `NodePort`。
+
+查看安装结果：
+
+`kubectl get pod -n chaosblade`{{execute}}

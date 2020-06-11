@@ -11,10 +11,10 @@ spec:
     matchers:
     - name: labels
       value:
-      - "app=httpbin"
+      - "role=master"
     - name: namespace
       value:
-      - "default"
+      - "chaosblade"
     - name: evict-count
       value:
       - "2"

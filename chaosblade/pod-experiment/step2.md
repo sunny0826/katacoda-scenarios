@@ -23,9 +23,11 @@ Pod 资源均支持以下参数。
 
 **开始实验**
 
-修改 `delete_pod_by_labels.yaml`{{open}}，将 pod 名称填入 `name` 字段。
+打开新终端：
+`echo "Run in Terminal 3"`{{execute T2}}
 
-在新终端开始实验：`kubectl apply -f delete_pod_by_labels.yaml`{{execute T2}}
+在新终端开始实验：
+`kubectl apply -f delete_pod_by_labels.yaml`{{execute}}
 
 **查看实验状态**
 
@@ -38,6 +40,9 @@ Pod 资源均支持以下参数。
 `echo "Run in Terminal 1"`{{execute T1}}
 
 可以看到 pod 名称发生变化，表示原 pod 已被删除。
+
+结束 pod 观测：
+`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
 **停止实验**
 

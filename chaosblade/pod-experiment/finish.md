@@ -1,4 +1,6 @@
-![](https://tva1.sinaimg.cn/large/ad5fbf65gy1gfgdamuzm1j212t0lq46x.jpg)
+<center>
+    <img src="https://tva1.sinaimg.cn/large/ad5fbf65gy1gfgdamuzm1j212t0lq46x.jpg" style="width: 200px;">
+</center>
 
 本教程列举了目前支持的所有 pod 混沌实验场景，但是每个场景只列举了一种示例，可以通过调整参数进行不同的实验。
 

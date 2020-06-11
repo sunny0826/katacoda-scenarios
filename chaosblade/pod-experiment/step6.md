@@ -16,10 +16,10 @@
 - 集群中部署了 `chaosblade-admission-webhook`
 - 需要注入故障的 `volume` 设置 `mountPropagation为HostToContainer`
 - pod 上面添加了如下 `annotations`:
-    ```yaml
-    chaosblade/inject-volume: "data" //需要注入故障的volume name
-    chaosblade/inject-volume-subpath: "conf" //volume挂载的子目录
-    ```
+```yaml
+chaosblade/inject-volume: "data" //需要注入故障的volume name
+chaosblade/inject-volume-subpath: "conf" //volume挂载的子目录
+```
 
 **部署测试 pod**
 
@@ -51,10 +51,10 @@ chaosblade webhook 会根据 pod 的 annotation，注入 fuse 的 sidecar 容器
 **观测结果**
 
 首先需要在 pod 目录新建一个文件进行模拟：
-`kubectl exec $(kubectl get pod -l app=test -n chaosblade -o jsonpath={.items..metadata.name}) -n chaosblade -- bash -c 'touch /data/conf/test'`{{execute}}
+`kubectl exec $(kubectl get pod -l app=test -n chaosblade -o jsonpath={.items..metadata.name}) -c test -n chaosblade -- /bin/sh -c 'touch /data/conf/test'`{{execute}}
 
 读取指定新建的实验文件，查看访问时间：
-`kubectl exec $(kubectl get pod -l app=test -n chaosblade -o jsonpath={.items..metadata.name}) -n chaosblade -- bash -c 'time cat /data/conf/test'`{{execute}}
+`kubectl exec $(kubectl get pod -l app=test -n chaosblade -o jsonpath={.items..metadata.name}) -c test -n chaosblade -- /bin/sh -c 'time cat /data/conf/test'`{{execute}}
 
 这里可以多访问几次，因为设置了 60% 的异常。
 

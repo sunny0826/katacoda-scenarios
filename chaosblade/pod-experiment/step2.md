@@ -11,8 +11,6 @@ Pod 资源均支持以下参数。
 | `names` | string | Pod 资源名 | |
 | `waiting-time` | string | 实验结果等待时间，参数值要包含单位，例如 10s，1m | 20s |
 
-### 删除 Pod
-
 删除 chaosblade 命名空间下标签是 `role=master` 的 pod。
 
 **执行观测**

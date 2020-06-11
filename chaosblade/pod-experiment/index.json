@@ -18,15 +18,15 @@
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Step 4 - Pod 网络丢包场景",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Step 5 - Pod 域名访问异常场景",
         "text": "step5.md"
       },
       {
-        "title": "Step 6",
+        "title": "Step 6 - Pod 文件系统I/O故障",
         "text": "step6.md"
       }
     ],

@@ -20,7 +20,7 @@
 
 `echo $(kubectl get pod -l app=redis,role=master -o jsonpath={.items..metadata.name} -n chaosblade)`{{execute}}
 
-将结果填如 `delay_pod_network_by_names.yaml`{{open}} 中的 `spec`->`experiments`->`scope`->`matchers`->`name`->`value`
+打开 `delay_pod_network_by_names.yaml`{{open}} 将寄过贴入的 `name`
 
 执行命令，开始实验：
 

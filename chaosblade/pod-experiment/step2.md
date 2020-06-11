@@ -24,7 +24,7 @@ Pod 资源均支持以下参数。
 **开始实验**
 
 打开新终端：
-`echo "Run in Terminal 3"`{{execute T2}}
+`echo "Run in Terminal 2"`{{execute T2}}
 
 在新终端开始实验：
 `kubectl apply -f delete_pod_by_labels.yaml`{{execute}}

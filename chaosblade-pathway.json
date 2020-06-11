@@ -1,6 +1,6 @@
 {
-  "title": "chaosblade",
-  "description": "使用 chaosblade 体验混沌工程",
+  "title": "ChaosBlade",
+  "description": "使用 ChaosBlade 体验混沌工程",
   "courses": [
     {
       "course_id": "pod-experiment",

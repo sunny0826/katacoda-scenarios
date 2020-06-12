@@ -16,10 +16,12 @@
 - 集群中部署了 `chaosblade-admission-webhook`
 - 需要注入故障的 `volume` 设置 `mountPropagation` 为 `HostToContainer`
 - pod 上面添加了如下 `annotations`:
-<pre><code class="language-yaml">
-chaosblade/inject-volume: "data" //需要注入故障的 volume name
-chaosblade/inject-volume-subpath: "conf" //volume 挂载的子目录
-</code></pre>
+<pre>
+    <code class="yaml">
+    chaosblade/inject-volume: "data" //需要注入故障的 volume name
+    chaosblade/inject-volume-subpath: "conf" //volume 挂载的子目录
+    </code>
+</pre>
 
 **部署测试 pod**
 

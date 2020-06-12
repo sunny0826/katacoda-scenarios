@@ -2,7 +2,7 @@
   "title": "Pod 实验场景",
   "description": "使用 ChaosBlade 对 Pod 进行混沌工程实验",
   "difficulty": "Beginner",
-  "time": "10 minutes",
+  "time": "20 minutes",
   "details": {
     "steps": [
       {

@@ -1,4 +1,4 @@
->注意：此场景需要激活 `--webhook-enable` 参数，如需使用此功能，请在 chaosblade-operator 参数中添加 `--webhook-enable`，或者在安装时指定，例如 helm 安装时： `--set webhook.enable=true` 指定。
+>注意：此场景需要激活 `--webhook-enable` 参数，如需使用此功能，请在 chaosblade-operator 参数中添加 `--webhook-enable`，或者在安装时指定：例如 helm 安装时添加 `--set webhook.enable=true` 指定。
 
 **参数**
 
@@ -14,12 +14,12 @@
 **前提条件**
 
 - 集群中部署了 `chaosblade-admission-webhook`
-- 需要注入故障的 `volume` 设置 `mountPropagation为HostToContainer`
+- 需要注入故障的 `volume` 设置 `mountPropagation` 为 `HostToContainer`
 - pod 上面添加了如下 `annotations`:
-```yaml
-chaosblade/inject-volume: "data" //需要注入故障的volume name
-chaosblade/inject-volume-subpath: "conf" //volume挂载的子目录
-```
+<pre><code class="language-yaml">
+chaosblade/inject-volume: "data" //需要注入故障的 volume name
+chaosblade/inject-volume-subpath: "conf" //volume 挂载的子目录
+</code></pre>
 
 **部署测试 pod**
 
@@ -29,6 +29,8 @@ chaosblade webhook 会根据 pod 的 annotation，注入 fuse 的 sidecar 容器
 2. `chaosblade/inject-volume-subpath` 指明 volume 挂载路径的子目录。上面的例子中，volume 的挂载路径是 `/data`,子目录是 `conf`，则在 pod 内，注入I/O异常的目录是 `/data/conf`。
 3. 指定需要注入故障的 volume 需要指定 `mountPropagation：HostToContainer`，这个字段的含义可以参考官方文档 [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/#mount-propagation)。
 
+执行命令，开始实验：
+
 `kubectl apply -f io-test-pod.yaml`{{execute}}
 
 查看 sidecar 是否注入成功：
@@ -37,7 +39,7 @@ chaosblade webhook 会根据 pod 的 annotation，注入 fuse 的 sidecar 容器
 
 **开始实验**
 
-可以打开 `pod_io.yaml`{{open}} 查看一下故障配置
+可以打开 `pod_io.yaml`{{open}} 查看故障配置
 
 执行命令，开始实验：
 `kubectl apply -f pod_io.yaml`{{execute}}
@@ -56,7 +58,7 @@ chaosblade webhook 会根据 pod 的 annotation，注入 fuse 的 sidecar 容器
 读取指定新建的实验文件，查看访问时间：
 `kubectl exec $(kubectl get pod -l app=test -n chaosblade -o jsonpath={.items..metadata.name}) -c test -n chaosblade -- /bin/sh -c 'time cat /data/conf/test.yaml'`{{execute}}
 
-这里可以多访问几次，因为设置了 60% 的异常。
+由于这里设置了 60% 的异常率，需要多访问几次来进行观测。
 
 在本例中，我们对 read 操作注入两种异常，异常率为百分之 60:
 

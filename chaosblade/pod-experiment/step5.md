@@ -12,7 +12,7 @@
 
 `echo $(kubectl get pod -l app=redis,role=master -o jsonpath={.items..metadata.name} -n chaosblade)`{{execute}}
 
-打开 `dns_pod_network_by_names.yaml`{{open}} ，将结果贴入 `name`
+打开 `dns_pod_network_by_names.yaml`{{open}} ，将`Pod 名称`贴入 `name` 字段
 
 执行命令，开始实验：
 

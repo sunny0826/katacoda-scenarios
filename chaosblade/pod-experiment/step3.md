@@ -20,17 +20,17 @@
 
 `echo $(kubectl get pod -l app=redis,role=master -o jsonpath={.items..metadata.name} -n chaosblade)`{{execute}}
 
-打开 `delay_pod_network_by_names.yaml`{{open}} 将寄过贴入的 `name`
+打开 `delay_pod_network_by_names.yaml`{{open}} 将 `Pod 名称`贴入 `name` 字段
 
 执行命令，开始实验：
 
 `kubectl apply -f delay_pod_network_by_names.yaml`{{execute}}
 
-等待 **phase** 状态变为 **Running**
-
 **查看实验状态**
 
 执行命令：`kubectl get blade delay-pod-network-by-names -n chaosblade -o json`{{execute}}
+
+等待 **phase** 状态变为 **Running**
 
 **观测结果**
 

@@ -23,7 +23,7 @@
 
 `echo $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[0]..status.podIP})`{{execute}}
 
-打开 `loss_pod_network_by_names.yaml`{{open}} ，将结果贴入 `name` 和 `destination-ip`
+打开 `loss_pod_network_by_names.yaml`{{open}} ，将`Pod 名称`和`目标 IP`贴入 `name` 和 `destination-ip` 字段
 
 执行命令，开始实验：
 
@@ -50,7 +50,7 @@
 
 相应正常，`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
-这里在配置中还将 `timeout` 设置为 60 秒，60 秒后 100% 丢包的情况将会消失，这个配置是为了防止因丢包率设置太高，造成机器无法连接的情况。与其有相似功能的还有 `exclude-port`，该配置用来指定排除掉的丢包端口。
+>这里在配置中将 `timeout` 设置为 60 秒，60 秒后 100% 丢包的情况将会消失，这个配置是为了防止因丢包率设置太高，造成机器无法连接的情况。与其有相似功能的还有 `exclude-port`，该配置指定一些端口不会丢包，以免该 pod 失联。
 
 **停止实验**
 

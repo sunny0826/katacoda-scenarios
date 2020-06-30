@@ -2,6 +2,8 @@
 
 curl -L https://istio.io/downloadIstio | sh -
 
-export PATH=$PATH:/root/istio-*/bin
+cd istio-*
+
+export PATH=$PATH:$(pwd)/bin
 
 istioctl manifest apply --set profile=demo

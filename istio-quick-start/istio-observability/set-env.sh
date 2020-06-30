@@ -1,7 +1,7 @@
 #!/bin/bash
 
-curl -L https://raw.githubusercontent.com/istio/istio/release-1.5/release/downloadIstioCandidate.sh | sh - 
+curl -L https://istio.io/downloadIstio | sh -
 
-export PATH=$PATH:/root/istio-1.5.1/bin
+export PATH=$PATH:/root/istio-*/bin
 
 istioctl manifest apply --set profile=demo

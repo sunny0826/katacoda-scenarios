@@ -14,7 +14,7 @@ https://[[HOST_SUBDOMAIN]]-80-[[KATACODA_HOST]].environments.katacoda.com/kiali
 
 查看 Prometheus 端口：
 
-`echo $(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="prometheus")].nodePort})'`{{execute}}
+`echo $(kubectl -n istio-system get service istio-ingressgateway -o jsonpath='{.spec.ports[?(@.name=="prometheus")].nodePort}')`{{execute}}
 
 查看 Tracing 端口：
 

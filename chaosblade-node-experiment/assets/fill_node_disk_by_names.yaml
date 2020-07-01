@@ -10,6 +10,6 @@ spec:
     desc: "node disk fill"
     matchers:
     - name: names
-      value: ["controlplane"]
+      value: ["node01"]
     - name: percent
       value: ["80"]

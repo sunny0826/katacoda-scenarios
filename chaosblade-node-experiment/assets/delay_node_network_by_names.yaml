@@ -10,7 +10,7 @@ spec:
     desc: "delay node network loss"
     matchers:
     - name: names
-      value: ["controlplane"]
+      value: ["node01"]
     - name: interface
       value: ["ens3"]
     - name: local-port

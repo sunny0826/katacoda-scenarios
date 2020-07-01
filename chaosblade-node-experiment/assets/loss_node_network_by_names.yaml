@@ -10,7 +10,7 @@ spec:
     desc: "node network loss"
     matchers:
     - name: names
-      value: ["controlplane"]
+      value: ["node01"]
     - name: percent
       value: ["100"]
     - name: interface

@@ -1,4 +1,4 @@
-此实验会挂起 `controlplane` 节点上的 `redis-server` 进程。
+此实验会挂起 `node01` 节点上的 `redis-server` 进程。
 
 **参数**
 
@@ -10,7 +10,7 @@
 
 **开始实验**
 
-这里选择 `controlplane` 节点，可以打开 `stop_node_process_by_names.yaml`{{open}} 查看配置。
+这里选择 `node01` 节点，可以打开 `stop_node_process_by_names.yaml`{{open}} 查看配置。
 
 开始实验：
 `kubectl apply -f stop_node_process_by_names.yaml`{{execute}}
@@ -23,9 +23,15 @@
 
 **观测结果**
 
+进入终端2：
+`echo "Run in Terminal 2"`{{execute T2}}
+
 可以看到 `redis-server` 此刻进程处于暂停状态了（T）。
 
 `ps aux| grep redis-server`{{execute}}
+
+回到控制节点：
+`echo "Run in Terminal 1"`{{execute T1}}
 
 **停止实验**
 

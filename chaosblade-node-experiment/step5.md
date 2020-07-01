@@ -23,13 +23,22 @@
 
 **观测结果**
 
+进入终端2：
+`echo "Run in Terminal 2"`{{execute T2}}
+
 ping 百度无响应
 
 `ping www.baidu.com`{{execute}}
 
+结束观测：
+`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
+
 可以看到 Node 的 `/etc/hosts` 文件被修改，模拟了 dns 解析异常的场景。
 
 `cat /etc/hosts`{{execute}}
+
+回到控制节点：
+`echo "Run in Terminal 1"`{{execute T1}}
 
 **停止实验**
 

@@ -1,4 +1,4 @@
-此实验会删除 `controlplane` 节点上的 `redis-server` 进程。
+此实验会删除 `node01` 节点上的 `redis-server` 进程。
 
 **参数**
 
@@ -12,9 +12,15 @@
 
 **开始实验**
 
-这里选择 `controlplane` 节点，可以打开 `kill_node_process_by_names.yaml`{{open}} 查看配置。
+这里选择 `node01` 节点，可以打开 `kill_node_process_by_names.yaml`{{open}} 查看配置。
 
-先查看 `redis-server` 的进程号 `ps -ef | grep redis-server`{{execute}}
+进入终端2：
+`echo "Run in Terminal 2"`{{execute T2}}
+
+查看 `redis-server` 的进程号 `ps -ef | grep redis-server`{{execute}}
+
+回到控制节点：
+`echo "Run in Terminal 1"`{{execute T1}}
 
 开始实验：
 `kubectl apply -f kill_node_process_by_names.yaml`{{execute}}
@@ -27,9 +33,15 @@
 
 **观测结果**
 
+进入终端2：
+`echo "Run in Terminal 2"`{{execute T2}}
+
 再次查看 `redis-server` 的进程号 `ps -ef | grep redis-server`{{execute}}
 
 `redis-server` 的进程号发生改变，说明被杀掉后，又被重新拉起。
+
+回到控制节点：
+`echo "Run in Terminal 1"`{{execute T1}}
 
 **停止实验**
 

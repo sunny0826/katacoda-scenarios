@@ -1,4 +1,4 @@
-指定一个节点，做 CPU 负载 60% 实验。
+`node01` 节点，做 CPU 负载 60% 实验。
 
 **参数**
 
@@ -11,7 +11,7 @@
 
 **开始实验**
 
-这里选择 `controlplane` 节点，可以打开 `node_cpu_load.yaml`{{open}} 查看配置。
+这里选择 `node01` 节点，可以打开 `node_cpu_load.yaml`{{open}} 查看配置。
 
 开始实验：
 `kubectl apply -f node_cpu_load.yaml`{{execute}}
@@ -24,10 +24,19 @@
 
 **查看实验结果**
 
+打开新终端：
+`echo "Run in Terminal 2"`{{execute T2}}
+
+进入 node01 节点
+`ssh root@$(kubectl get nodes node01 -o jsonpath={.status.addresses[0].address})`
+
 使用 `top`{{execute}} 命令，查看 `controlplane` 节点（终端所在节点）CPU。
 
 结束 pod 观测：
 `echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
+
+回到控制节点：
+`echo "Run in Terminal 1"`{{execute T1}}
 
 **停止实验**
 

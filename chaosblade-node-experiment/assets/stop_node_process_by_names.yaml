@@ -10,6 +10,6 @@ spec:
     desc: "kill node process by names"
     matchers:
     - name: names
-      value: ["controlplane"]
+      value: ["node01"]
     - name: process
       value: ["redis-server"]

@@ -1,4 +1,4 @@
-`controlplane` 节点磁盘占用 80%
+`node01` 节点磁盘占用 80%
 
 **参数**
 
@@ -15,7 +15,7 @@
 
 **开始实验**
 
-这里选择 `controlplane` 节点，可以打开 `fill_node_disk_by_names.yaml`{{open}} 查看配置。
+这里选择 `node01` 节点，可以打开 `fill_node_disk_by_names.yaml`{{open}} 查看配置。
 
 开始实验：
 `kubectl apply -f fill_node_disk_by_names.yaml`{{execute}}
@@ -28,9 +28,15 @@
 
 **观测结果**
 
+进入终端2：
+`echo "Run in Terminal 2"`{{execute T2}}
+
 可以看到磁盘占用 80%。
 
 `df -h`{{execute}}
+
+回到控制节点：
+`echo "Run in Terminal 1"`{{execute T1}}
 
 **停止实验**
 

@@ -11,7 +11,7 @@ spec:
     matchers:
     - name: names
       value:
-      - "controlplane"
+      - "node01"
     - name: domain
       value: ["www.baidu.com"]
     - name: ip

@@ -1,6 +1,6 @@
 > 实验前，请先登录 node 节点，使用 `ifconfig` 命令查看网卡信息，不是所有系统默认的网卡名称都是 `eth0`。
 
-`controlplane` 节点的本地 `guestbook` 的端口添加 3000 毫秒访问延迟，延迟时间上下浮动 1000 毫秒。
+`node01` 节点的本地 `guestbook` 的端口添加 3000 毫秒访问延迟，延迟时间上下浮动 1000 毫秒。
 
 **参数**
 
@@ -35,13 +35,19 @@
 
 **查看实验结果**
 
+进入终端2：
+`echo "Run in Terminal 2"`{{execute T2}}
+
 访问实验节点端口，查看延迟：
+
+`time echo "" | telnet $(kubectl get nodes node01 -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
+
+访问未开启实验的控制节点端口，无延迟：
 
 `time echo "" | telnet $(kubectl get nodes controlplane -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
 
-访问未开启实验节点端口，无延迟：
-
-`time echo "" | telnet $(kubectl get nodes node01 -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
+回到控制节点：
+`echo "Run in Terminal 1"`{{execute T1}}
 
 **停止实验**
 

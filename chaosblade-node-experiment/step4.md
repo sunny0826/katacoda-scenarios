@@ -1,4 +1,4 @@
-`controlplane` 节点的 `guestbook` 的端口注入丢包率 100% 的故障。
+`node01` 节点的 `guestbook` 的端口注入丢包率 100% 的故障。
 
 **参数**
 
@@ -30,23 +30,29 @@
 
 等待 **phase** 状态变为 **Running**
 
-**查看实验结果**
+**观测结果**
+
+进入终端2：
+`echo "Run in Terminal 2"`{{execute T2}}
 
 该端口为 `Guestbook` nodeport 的端口，访问实验端口无响应，但是访问未开启实验的端口可以正常使用
 
 从实验节点访问 Guestbook - 无法访问：
 
-`telnet $(kubectl get nodes controlplane -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
+`telnet $(kubectl get nodes node01 -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
 
 结束观测：
 `echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
 从非实验节点访问 Guestbook - 正常访问：
 
-`telnet $(kubectl get nodes node01 -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
+`telnet $(kubectl get nodes controlplane -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
 
 结束观测：
 `echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
+
+回到控制节点：
+`echo "Run in Terminal 1"`{{execute T1}}
 
 **停止实验**
 

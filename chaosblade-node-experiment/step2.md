@@ -27,9 +27,11 @@
 打开新终端：
 `echo "Run in Terminal 2"`{{execute T2}}
 
-进入 node01 节点，按照要求输入 `yes`
+进入 node01 节点
 
 `ssh root@$(kubectl get nodes node01 -o jsonpath={.status.addresses[0].address})`{{execute}}
+
+按照要求输入 `yes`{{execute}}
 
 使用 `top`{{execute}} 命令，查看 `controlplane` 节点（终端所在节点）CPU。
 

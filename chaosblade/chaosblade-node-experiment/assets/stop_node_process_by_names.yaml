@@ -1,0 +1,15 @@
+apiVersion: chaosblade.io/v1alpha1
+kind: ChaosBlade
+metadata:
+  name: stop-node-process-by-names
+spec:
+  experiments:
+  - scope: node
+    target: process
+    action: stop
+    desc: "kill node process by names"
+    matchers:
+    - name: names
+      value: ["node01"]
+    - name: process
+      value: ["redis-server"]

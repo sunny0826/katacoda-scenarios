@@ -10,6 +10,6 @@ spec:
     desc: "kill node process by names"
     matchers:
     - name: names
-      value: ["docker20"]
+      value: ["controlplane"]
     - name: process
       value: ["redis-server"]

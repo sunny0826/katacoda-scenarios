@@ -10,10 +10,10 @@ spec:
     desc: "node network loss"
     matchers:
     - name: names
-      value: ["docker20"]
+      value: ["controlplane"]
     - name: percent
       value: ["100"]
     - name: interface
-      value: ["ens33"]
+      value: ["ens3"]
     - name: local-port
       value: ["32436"]

@@ -1,15 +1,15 @@
 apiVersion: chaosblade.io/v1alpha1
 kind: ChaosBlade
 metadata:
-  name: fill-node-disk-by-names
+  name: stop-node-process-by-names
 spec:
   experiments:
   - scope: node
-    target: disk
-    action: fill
-    desc: "node disk fill"
+    target: process
+    action: stop
+    desc: "kill node process by names"
     matchers:
     - name: names
       value: ["controlplane"]
-    - name: percent
-      value: ["80"]
+    - name: process
+      value: ["redis-server"]

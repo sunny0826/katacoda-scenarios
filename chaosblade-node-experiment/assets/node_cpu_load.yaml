@@ -11,7 +11,7 @@ spec:
     matchers:
     - name: names
       value:
-      - "docker20"
+      - "controlplane"
     - name: cpu-percent
       value:
-      - "80"
+      - "60"

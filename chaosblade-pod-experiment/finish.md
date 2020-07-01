@@ -6,4 +6,4 @@
 
 更多实验内容详见：https://github.com/sunny0826/chaosblade-operator-experiment
 
-ChaosBlade 官方文档：https://chaosblade-io.gitbook.io/chaosblade-help-zh-cn
+ChaosBlade 官方文档：https://chaosblade.io/docs/

@@ -6,24 +6,36 @@
   "details": {
     "steps": [
       {
-        "title": "Step 1",
+        "title": "Step 1 - 实验准备",
         "text": "step1.md"
       },
       {
-        "title": "Step 2",
+        "title": "Step 2 - Node CPU 负载场景",
         "text": "step2.md"
       },
       {
-        "title": "Step 3",
+        "title": "Step 3 - Node 网络延迟场景",
         "text": "step3.md"
       },
       {
-        "title": "Step 4",
+        "title": "Step 4 - Node 网络丢包场景",
         "text": "step4.md"
       },
       {
-        "title": "Step 5",
+        "title": "Step 5 - Node 域名访问异常场景",
         "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - Node 磁盘填充场景",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - Node 杀指定进程",
+        "text": "step7.md"
+      },
+      {
+        "title": "Step 8 - Node 挂起指定进程",
+        "text": "step8.md"
       }
     ],
     "assets": {

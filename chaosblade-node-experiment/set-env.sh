@@ -13,7 +13,7 @@ kubectl create namespace chaosblade
 helm install chaos chaosblade-operator-0.6.0.tgz --set webhook.enable=true --namespace=chaosblade
 
 # add repo
-helm repo add apphub-incubator https://apphub.aliyuncs.com/incubator/`
+helm repo add apphub-incubator https://apphub.aliyuncs.com/incubator/
 
 # inatall guestbook
 helm install guestbook apphub-incubator/guestbook --set service.type=NodePort --namespace=chaosblade

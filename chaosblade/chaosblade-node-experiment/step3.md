@@ -41,7 +41,7 @@
 
 访问未开启实验的控制节点端口，无延迟：
 
-`time echo "" | telnet $(kubectl get nodes $(kubectl get node -l node-role.kubernetes.io/controlplane=true -o jsonpath={.items..metadata.name}) -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
+`time echo "" | telnet $(kubectl get nodes $(kubectl get node --selector='node-role.kubernetes.io/master' -o jsonpath={.items..metadata.name}) -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
 
 **停止实验**
 

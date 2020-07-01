@@ -43,7 +43,7 @@
 
 访问非实验节点 Guestbook - 正常访问：
 
-`telnet $(kubectl get nodes $(kubectl get node -l node-role.kubernetes.io/controlplane=true -o jsonpath={.items..metadata.name}) -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
+`telnet $(kubectl get nodes $(kubectl get node --selector='node-role.kubernetes.io/master' -o jsonpath={.items..metadata.name}) -o jsonpath={.status.addresses[0].address}) $(kubectl get svc -n chaosblade guestbook -o jsonpath={.spec.ports[0].nodePort})`{{execute}}
 
 结束观测：
 `echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}

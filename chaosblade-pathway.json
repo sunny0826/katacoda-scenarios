@@ -11,6 +11,11 @@
       "course_id": "chaosblade-node-experiment",
       "title": "Node 实验场景",
       "description": "使用 ChaosBlade 对 Node 进行混沌实验"
+    },
+    {
+      "course_id": "chaosblade-container-experiment",
+      "title": "Container 实验场景",
+      "description": "使用 ChaosBlade 对 Container 进行混沌工程实验"
     }
   ]
 }

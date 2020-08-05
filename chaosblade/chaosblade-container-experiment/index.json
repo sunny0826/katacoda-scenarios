@@ -1,0 +1,59 @@
+{
+  "title": "Container 实验场景",
+  "description": "使用 ChaosBlade 对 Container 进行混沌工程实验",
+  "difficulty": "Beginner",
+  "time": "20 minutes",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1 - 实验准备",
+        "text": "step1.md"
+      },
+      {
+        "title": "Step 2 - 删除 container",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3 - container 网络延迟场景",
+        "text": "step3.md"
+      },
+      {
+        "title": "Step 4 - container 网络丢包场景",
+        "text": "step4.md"
+      },
+      {
+        "title": "Step 5 - container 域名访问异常场景",
+        "text": "step5.md"
+      },
+      {
+        "title": "Step 6 - 杀 container 内指定进程",
+        "text": "step6.md"
+      },
+      {
+        "title": "Step 7 - 挂起 container 内指定进程",
+        "text": "step7.md"
+      }
+    ],
+    "assets": {
+      "host01": [
+        {
+          "file": "*",
+          "target": "~/"
+        }
+      ]
+    },
+    "intro": {
+      "text": "intro.md",
+      "code": "set-env.sh"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running"
+  }
+}

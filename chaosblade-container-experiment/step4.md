@@ -60,6 +60,6 @@
 
 **停止实验**
 
-执行命令：`kubectl apply -f loss_container_network_by_id.yaml`{{execute}}
+执行命令：`kubectl delete -f loss_container_network_by_id.yaml`{{execute}}
 
 或者直接删除 blade 资源：`kubectl delete blade loss-container-network-by-id`{{execute}}

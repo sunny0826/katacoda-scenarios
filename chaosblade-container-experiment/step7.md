@@ -12,11 +12,11 @@
 
 获取 Pod 名称：
 
-`echo $(kubectl get pod -l app=redis,role=master -o jsonpath={.items..metadata.name} -n chaosblade)`{{execute}}
+`echo $(kubectl get pod -l app=redis,role=slave -o jsonpath={.items[0]..metadata.name} -n chaosblade)`{{execute}}
 
 获取 container id：
 
-`kubectl get pod $(kubectl get pod -l app=redis,role=master -o jsonpath={.items..metadata.name} -n chaosblade) -n chaosblade -o custom-columns=CONTAINER:.status.containerStatuses[0].name,ID:.status.containerStatuses[0].containerID`{{execute}}
+`kubectl get pod $(kubectl get pod -l app=redis,role=slave -o jsonpath={.items[0]..metadata.name} -n chaosblade) -n chaosblade -o custom-columns=CONTAINER:.status.containerStatuses[0].name,ID:.status.containerStatuses[0].containerID`{{execute}}
 
 打开 `stop_container_process_by_id.yaml`{{open}}，将 `container id` 和 `Pod 名称`贴入 `container-ids` 和 `name` 字段。
 
@@ -34,7 +34,7 @@
 
 进入实验 pod，查看 redis-server 进程号：
 
-`kubectl exec $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'ps aux| grep redis-server'`{{execute}}
+`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'ps aux| grep redis-server'`{{execute}}
 
 可以看到 `redis-server` 此刻进程处于暂停状态了（T）。
 

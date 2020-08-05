@@ -32,23 +32,18 @@
 
 **观测结果**
 
-获取实验 pod ip：
-`echo $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})`{{execute}}
-
-直接从观测 pod 访问实验 pod IP：
-`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'ping '$(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})`{{execute}}
+直接从实验 pod 访问 `wwww.baidu.com`：
+`kubectl exec $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'ping www.baidu.com'`{{execute}}
 
 无响应，`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
 
-从未指定丢包的 pod 进入访问实验 pod IP：
-`kubectl exec $(kubectl get pod -l app=redis,role=slave -n chaosblade -o jsonpath={.items[1]..metadata.name}) -n chaosblade -- bash -c 'ping '$(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items..status.podIP})`{{execute}}
+查看容器 `/etc/hosts` 文件：
+`kubectl exec $(kubectl get pod -l app=redis,role=master -n chaosblade -o jsonpath={.items[0]..metadata.name}) -n chaosblade -- bash -c 'cat /etc/hosts'`{{execute}}
 
-相应正常，`echo "Send Ctrl+C before running Terminal"`{{execute interrupt}}
-
->这里在配置中将 `timeout` 设置为 60 秒，60 秒后 100% 丢包的情况将会消失，这个配置是为了防止因丢包率设置太高，造成机器无法连接的情况。与其有相似功能的还有 `exclude-port`，该配置指定一些端口不会丢包，以免该 pod 失联。
+可以看到 Node 的 `/etc/hosts` 文件被修改，模拟了 dns 解析异常的场景。
 
 **停止实验**
 
-执行命令：`kubectl apply -f tamper_container_dns_by_id.yaml`{{execute}}
+执行命令：`kubectl delete -f tamper_container_dns_by_id.yaml`{{execute}}
 
 或者直接删除 blade 资源：`kubectl delete blade tamper-container-dns-by-id `{{execute}}

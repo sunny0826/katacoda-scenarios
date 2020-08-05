@@ -18,15 +18,15 @@
 
 `kubectl get pod $(kubectl get pod -l app=redis,role=master -o jsonpath={.items..metadata.name} -n chaosblade) -n chaosblade -o custom-columns=CONTAINER:.status.containerStatuses[0].name,ID:.status.containerStatuses[0].containerID`{{execute}}
 
-打开 `stop_container_process_by_names.yaml`{{open}}，将 `container id` 和 `Pod 名称`贴入 `container-ids` 和 `name` 字段。
+打开 `stop_container_process_by_id.yaml`{{open}}，将 `container id` 和 `Pod 名称`贴入 `container-ids` 和 `name` 字段。
 
 执行命令，开始实验：
 
-`kubectl apply -f stop_container_process_by_names.yaml`{{execute}}
+`kubectl apply -f stop_container_process_by_id.yaml`{{execute}}
 
 **查看实验状态**
 
-执行命令： `kubectl get blade stop-container-process-by-names -o json`{{execute}}
+执行命令： `kubectl get blade stop-container-process-by-id -o json`{{execute}}
 
 等待 **phase** 状态变为 **Running**
 
@@ -40,6 +40,6 @@
 
 **停止实验**
 
-执行命令：`kubectl delete -f stop_container_process_by_names.yaml`{{execute}}
+执行命令：`kubectl delete -f stop_container_process_by_id.yaml`{{execute}}
 
-或者直接删除 blade 资源：`kubectl delete blade stop-container-process-by-names`{{execute}}
+或者直接删除 blade 资源：`kubectl delete blade stop-container-process-by-id`{{execute}}

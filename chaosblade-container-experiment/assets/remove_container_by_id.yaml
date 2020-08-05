@@ -1,0 +1,18 @@
+apiVersion: chaosblade.io/v1alpha1
+kind: ChaosBlade
+metadata:
+  name: remove-container-by-id
+spec:
+  experiments:
+  - scope: container
+    target: container
+    action: remove
+    desc: "remove container by id"
+    matchers:
+    - name: container-ids
+      value: ["02655dfdd9f0f712a10d63fdc6721f4dcee0a390e37717fff068bf3f85abf85e"]
+      # pod name
+    - name: names
+      value: ["redis-master-68857cd57c-hknb6"]
+    - name: namespace
+      value: ["chaosblade"]
